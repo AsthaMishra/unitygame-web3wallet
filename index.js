@@ -8,6 +8,7 @@ let signer;
 document.addEventListener("DOMContentLoaded", loadApp());
 
 async function loadApp() {
+  console.log("loaded");
   provider = new ethers.providers.Web3Provider(window.ethereum, "any");
   signer = provider.getSigner();
   if (!signer) window.location.reload();
